@@ -18,7 +18,7 @@
 
 .barra{
     background-color: var(--cor1);
-    height: 20px;
+    height: 30px;
 }
 
 .barra2{
@@ -33,7 +33,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    justify-content: center;
 }
 .logo img{
     min-width: 50px;
@@ -73,6 +73,10 @@ li:hover{
     color: #fff;
     font-weight: bold;
 }
+.apresentacao{
+    margin-top: 50px;
+    text-align: center;
+}
 main{
     min-width: 280px;
     max-width: 1000px;
@@ -84,6 +88,21 @@ main{
     margin-top: 10px;
     justify-content: center;
 }
+.selecao{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.selecao select{
+    width: 80%;
+    height: 50px;
+    border: 1px solid var(--cor1);
+    border-radius: 10px;
+}
+.selecao option{
+    text-align: center;
+    font-family: var(--fonte-padrao);
+}
 main h2{
     font-family: var(--fonte-destaque);
     font-size: 1.5em;
@@ -92,44 +111,70 @@ main p{
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
 }
-.bacias{
-    opacity: 0;
+#dados{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 50px;
 }
-.campos{
-    opacity: 0;
+.estilo>div{
+    flex: 1 1 25%;
+    padding: 5px;
+    border: 1px solid var(--cor2);
+    text-align: center;
 }
-.blocos{
-    opacity: 0;
+.estilo h2{
+    border-bottom: 1px solid var(--cor2);
+    padding: 5px;
 }
-.pocos{
-    opacity: 0;
+.estilo p{
+    padding: 3px;
 }
-.formatacao{
-    background-color: #0284459d;
+footer{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    position: absolute;
-    width: 80%;
-    border: 1px solid black;
+    border-top: 1px solid #afafaf;
 }
-.formatacao>div{
-    flex: 1 1 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    
+footer h2{
+    color: var(--cor2);
+    font-family: var(--fonte-destaque);
+    margin: 5px 0px;
+    font-size: 1.8em;
+    letter-spacing: 2px;
 }
-.formatacao>div>div{
+footer h3{
+    color: var(--cor1);
+    font-family: var(--fonte-padrao);
+    margin: 15px 0px;
+    font-size: 1.5em;
+}
+footer p{
+    font-family: var(--fonte-padrao);
+    margin: 10px 0px;
+    font-size: 1.2em;
+}
+.foo1{
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
-    border: 1px solid black;
-    padding: 10px;
-}
-.formatacao>h2{
-    display: flex;
-    justify-content: center;
     align-items: center;
-    
+}
+.foo1_2{
+    display: flex;
+    width: 100%;
+}
+.foo1_2>*{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foo2{
+    border-top: 1px solid #afafaf;
+    background-color: #e5e5e5;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Acesso</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 93vh;
+            overflow: hidden;
+            flex-direction: column;
+            background-color: #e5e5e5;
+        }
+
+        .formulario{
+            height: 400px;
+            width: 500px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("imagens/logo-petrofind.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            border: 5px solid rgb(230, 230, 230);
+            }
+
+        form>* {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form>input {
+            width: 200px;
+            border-radius: 5px;
+            height: 20px;
+            opacity: .5;
+        }
+
+        label {
+            font-size: 1.5em;
+        }
+
+        input {
+            border: 1.5px solid black;
+        }
+
+        button {
+            width: 100px;
+            margin: auto;
+            padding: 5px;
+            background-color: #028446;
+            color: #FFC62F;
+            border: 2px solid #00381d;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        button:active {
+            transform: scale(1);
+        }
+
+        footer {
+            padding: 10px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e5e5e5;
+            border-top: 1px solid #afafaf;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="formulario">
+            <form>
+                <label for="login">LOGIN</label>
+                <input type="text" name="login" id="login" autocomplete="off">
+                <label for="senha">SENHA</label>
+                <input type="password" name="senha" id="senha" autocomplete="off">
+                <button onclick="enviar()">ENTRAR</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Copyright PetroFind 2024. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function enviar() {
+            event.preventDefault();
+
+            var login = document.getElementById('login').value
+            var senha = document.getElementById('senha').value
+
+            if (login === 'admin' && senha === '1234') {
+                document.location.href = "index.html"
+            } else {
+                alert('Login ou senha incorretos.');
+            }
+        }
+    </script>
+</body>
+
+</html>
