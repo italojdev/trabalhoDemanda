@@ -19,8 +19,34 @@
 .barra{
     background-color: var(--cor1);
     height: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 5px;
 }
 
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--fonte-destaque);
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.menu li:hover{
+    transform: scale(1.1);
+}
+.menu li:active{
+    transform: scale(1);
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li{
+    margin: 10px;
+}
 .barra2{
     background-color: #fff;
     height: 10px;
@@ -49,7 +75,7 @@ header h1{
 nav{
     background-color: #e5e5e5;
 }
-ul{
+.dados{
     background-color: #fff;
     display: flex;
     flex-direction: row;
@@ -57,7 +83,7 @@ ul{
     margin: auto;
 }
 
-li{
+.dados>li{
     border: 1px solid rgba(0, 0, 0, 0.475);
     padding: 20px;
     flex: 1 1 100%;
@@ -68,7 +94,7 @@ li{
     cursor: pointer;
     
 }
-li:hover{
+.dados>li:hover{
     background-color: var(--cor1);
     color: #fff;
     font-weight: bold;
@@ -157,6 +183,7 @@ footer p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #e5e5e5;
 }
 .foo1_2{
     display: flex;
@@ -170,11 +197,66 @@ footer p{
 }
 .foo2{
     border-top: 1px solid #afafaf;
-    background-color: #e5e5e5;
+    background-color: #b5b5b5;
     min-height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: .8em;
+}
+
+
+.relatorio{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin: 20px 0px;
+    font-family: var(--fonte-padrao);
+    box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.258);
+}
+
+.conteudorel{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
+    margin: 5px 0px;
+}
+.topoconteudo{
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #4c4c4c;
+    color: #fff;
+}
+.con1, .topoconteudo div:nth-child(1){
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.topoconteudo div:nth-child(2){
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.con2{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #e5e5e5;
+    padding: 5px;
+}
+.con2 a{
+    padding: 5px;
+    border: 1px solid var(--cor2);
+    border-radius: 5px;
+    color: var(--cor2);
+    text-decoration: none;
 }
